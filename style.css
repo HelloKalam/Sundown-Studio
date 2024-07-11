@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Neue Haas Grotesk Display Pro;
+    box-sizing: border-box;
+}
+html body{
+    height: 100%;
+    background-color: #EFEAE3;
+    width: 100%;
+}
+.page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    border-bottom: 0.5px solid #bababa;
+}
+nav{
+    padding: 2vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+.nav-part2 h4{
+    font-size:  17px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 1px solid #8585857a;
+    border-radius: 50px;
+    position: relative;
+    color: #000000b6;
+    overflow: hidden;
+    cursor: pointer;
+}
+.nav-part2 h4 a{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    z-index: 9;
+}
+.nav-part2 h4:hover a{
+    color: white;
+}
+nav .nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    background-color: #000;
+    left: 0;
+    bottom: -100%;
+    border-radius: 95%;
+    transition: all ease 0.3s;
+}
+nav .nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+.center{
+    height: 78vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    
+}
+.left h3{
+    padding: 1vw 3vw;
+    width: 29vw;
+    font-size: 2vw;
+    font-weight: 600;
+    line-height: 2vw;
+}
+.right h1{
+    font-size: 11vw;
+    line-height: 9.1vw;
+    text-align: right;
+    padding-right: 3vw;
+
+}
+video{
+    width: 100%;
+    border-radius: 40px;
+    padding: 2vw;
+    position: relative;
+    margin-top: 5vw;
+}
+.hero-shape{
+    position: absolute;
+    width:46vw;
+    height: 36vw;
+    right: 0;
+    top: 40%;
+}
+.hero-1{
+    height: 100%;
+    background-color: #FE320A;
+    width: 100%;
+    border-top-left-radius: 50%;
+    filter: blur(20px);
+    border-bottom-left-radius: 50%;
+    position: absolute;
+}
+.hero-2{
+    height: 35vw;
+    background-color: #FE320A;
+    width: 35vw;
+    filter: blur(20px);
+    position: absolute;
+    border-radius:50% ;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.hero-3{
+    height: 35vw;
+    background: linear-gradient(#FE320A, #fe570a);
+    width: 35vw;
+    filter: blur(29px);
+    position: absolute;
+    border-radius:50% ;
+    animation-name: anime;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime {
+    from{
+        transform: translate(-10%,-10%);
+    }
+    to{
+        transform: translate(10%,-10%);
+    }
+}
+@keyframes anime2 {
+    from{
+        transform: translate(5%,-3%);
+    }
+    to{
+        transform: translate(20%,20%);
+    }
+}
+
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.moving-text{
+    display: flex;
+    overflow: hidden;
+}
+.moving-text h1{
+    font-size: 11vw;
+    display: inline-block;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 18s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+.con .gola{
+    width: 4vw;
+    height: 4vw;
+    background-color: #FE320A;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 50%;
+    margin: 1vw 2.58vw;
+}
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.sub-page2{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5vw;
+    position: relative;
+    z-index: 9;
+}
+.left-pg2{
+    width: 70%;
+    display: block;
+    justify-content: space-between;
+    padding: 1vw 7vw ;
+}
+.left-pg2 h3{
+    font-size: 5vw;
+    line-height: 4.5vw;
+}
+.right-pg2{
+    width: 30%;
+    text-align: right;
+    padding: 0 5vw;
+    margin-top: 21vw;
+}
+.right-pg2 img{
+    width: 20vw;
+    border-radius: 10px;
+}
+.right-pg2 p{
+    text-align: center;
+    margin-top: 5vw;
+}
+.circle-pt2{
+    height: 38vw;
+    width: 38vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top,#FE320A,#ff7322);
+    top: 60%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: circle;
+    animation-timing-function: ease-out;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes circle {
+    from{
+        transform: translate(10%,-10%) skew(0);
+    }
+    to{
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+}
+.page3{
+    width: 100%;
+    margin-top: 15vw;
+    min-height: 100vh;
+}
+.elem{
+    height: 120px;
+    width: 100%;
+    border-bottom: 0.2px solid #35353577;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 3vw;
+    overflow: hidden;
+    cursor: pointer;
+}
+.elem h2{
+    font-size: 3vw;
+    z-index: 9;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #FF9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.3s;
+}
+.elem:hover .overlay{
+    top: 0; 
+}
